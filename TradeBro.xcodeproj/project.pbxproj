@@ -7,18 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58AFF7052C2DBE2800A98F84 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF7042C2DBE2800A98F84 /* APIClient.swift */; };
+		58AFF7082C2DBE6600A98F84 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF7072C2DBE6600A98F84 /* Response.swift */; };
+		58AFF70A2C2DBE6F00A98F84 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF7092C2DBE6F00A98F84 /* Endpoint.swift */; };
+		58AFF70C2C2DBE8100A98F84 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF70B2C2DBE8100A98F84 /* NetworkError.swift */; };
+		58AFF70E2C2DBEA100A98F84 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF70D2C2DBEA100A98F84 /* Errors.swift */; };
+		58AFF7102C2DBED300A98F84 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF70F2C2DBED300A98F84 /* GlobalFunctions.swift */; };
+		58AFF7132C2DC16500A98F84 /* RadiumClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF7122C2DC16500A98F84 /* RadiumClientAPI.swift */; };
+		58AFF7152C2DC22A00A98F84 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF7142C2DC22A00A98F84 /* HomeView.swift */; };
+		58AFF7172C2DC29400A98F84 /* TokenMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF7162C2DC29400A98F84 /* TokenMetadata.swift */; };
+		58AFF71A2C2DC7D100A98F84 /* SolToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF7192C2DC7D100A98F84 /* SolToken.swift */; };
+		58AFF71E2C2DD49000A98F84 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 58AFF71D2C2DD49000A98F84 /* Kingfisher */; };
+		58AFF7202C2DD54600A98F84 /* View+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF71F2C2DD54600A98F84 /* View+Kingfisher.swift */; };
+		58AFF7232C2DD5D200A98F84 /* KingfisherConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF7222C2DD5D200A98F84 /* KingfisherConfigurationManager.swift */; };
 		58CA52E32C108164002E7B15 /* TradeBroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA52E22C108164002E7B15 /* TradeBroApp.swift */; };
-		58CA52E52C108164002E7B15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA52E42C108164002E7B15 /* ContentView.swift */; };
 		58CA52E72C108165002E7B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58CA52E62C108165002E7B15 /* Assets.xcassets */; };
 		58CA52EA2C108165002E7B15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58CA52E92C108165002E7B15 /* Preview Assets.xcassets */; };
+		58CA52FA2C1083AA002E7B15 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA52F92C1083AA002E7B15 /* RootView.swift */; };
+		58CA52FC2C1083F5002E7B15 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA52FB2C1083F5002E7B15 /* RootViewModel.swift */; };
+		58CA52FF2C10847D002E7B15 /* DependancyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA52FE2C10847D002E7B15 /* DependancyContainer.swift */; };
+		58CA53022C1089D9002E7B15 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA53012C1089D9002E7B15 /* AppRouter.swift */; };
+		58CA53042C108A12002E7B15 /* PreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA53032C108A12002E7B15 /* PreloaderView.swift */; };
+		58CA53062C108CD6002E7B15 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA53052C108CD6002E7B15 /* WelcomeView.swift */; };
+		58CA530B2C108D1F002E7B15 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA530A2C108D1F002E7B15 /* HomeViewModel.swift */; };
+		58CA530E2C108FB7002E7B15 /* View+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA530D2C108FB7002E7B15 /* View+Navigation.swift */; };
+		58CA53112C177719002E7B15 /* Font+SFPro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA53102C177719002E7B15 /* Font+SFPro.swift */; };
+		58CA53162C177C66002E7B15 /* AppTextMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA53152C177C66002E7B15 /* AppTextMain.swift */; };
+		58CA531C2C1868F4002E7B15 /* SolanaSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 58CA531B2C1868F4002E7B15 /* SolanaSwift */; };
+		58CA531F2C189DF7002E7B15 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 58CA531E2C189DF7002E7B15 /* KeychainAccess */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58AFF7042C2DBE2800A98F84 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		58AFF7072C2DBE6600A98F84 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		58AFF7092C2DBE6F00A98F84 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		58AFF70B2C2DBE8100A98F84 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		58AFF70D2C2DBEA100A98F84 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		58AFF70F2C2DBED300A98F84 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		58AFF7122C2DC16500A98F84 /* RadiumClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiumClientAPI.swift; sourceTree = "<group>"; };
+		58AFF7142C2DC22A00A98F84 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		58AFF7162C2DC29400A98F84 /* TokenMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenMetadata.swift; sourceTree = "<group>"; };
+		58AFF7192C2DC7D100A98F84 /* SolToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolToken.swift; sourceTree = "<group>"; };
+		58AFF71F2C2DD54600A98F84 /* View+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Kingfisher.swift"; sourceTree = "<group>"; };
+		58AFF7222C2DD5D200A98F84 /* KingfisherConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherConfigurationManager.swift; sourceTree = "<group>"; };
 		58CA52DF2C108164002E7B15 /* TradeBro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeBro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58CA52E22C108164002E7B15 /* TradeBroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeBroApp.swift; sourceTree = "<group>"; };
-		58CA52E42C108164002E7B15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		58CA52E62C108165002E7B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58CA52E92C108165002E7B15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		58CA52F92C1083AA002E7B15 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		58CA52FB2C1083F5002E7B15 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		58CA52FE2C10847D002E7B15 /* DependancyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependancyContainer.swift; sourceTree = "<group>"; };
+		58CA53012C1089D9002E7B15 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		58CA53032C108A12002E7B15 /* PreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderView.swift; sourceTree = "<group>"; };
+		58CA53052C108CD6002E7B15 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		58CA530A2C108D1F002E7B15 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		58CA530D2C108FB7002E7B15 /* View+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigation.swift"; sourceTree = "<group>"; };
+		58CA53102C177719002E7B15 /* Font+SFPro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+SFPro.swift"; sourceTree = "<group>"; };
+		58CA53152C177C66002E7B15 /* AppTextMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextMain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +71,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58AFF71E2C2DD49000A98F84 /* Kingfisher in Frameworks */,
+				58CA531F2C189DF7002E7B15 /* KeychainAccess in Frameworks */,
+				58CA531C2C1868F4002E7B15 /* SolanaSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58AFF7032C2DBD4C00A98F84 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				58AFF70B2C2DBE8100A98F84 /* NetworkError.swift */,
+				58AFF7042C2DBE2800A98F84 /* APIClient.swift */,
+				58AFF7112C2DC15300A98F84 /* APIs */,
+				58AFF7062C2DBE6000A98F84 /* Models */,
+				58AFF71B2C2DD2BB00A98F84 /* Helpers */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		58AFF7062C2DBE6000A98F84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58AFF7072C2DBE6600A98F84 /* Response.swift */,
+				58AFF7092C2DBE6F00A98F84 /* Endpoint.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58AFF7112C2DC15300A98F84 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				58AFF7122C2DC16500A98F84 /* RadiumClientAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		58AFF7182C2DC2B600A98F84 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				58AFF7192C2DC7D100A98F84 /* SolToken.swift */,
+				58AFF7162C2DC29400A98F84 /* TokenMetadata.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		58AFF71B2C2DD2BB00A98F84 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		58AFF7212C2DD5C700A98F84 /* KingfisherManager */ = {
+			isa = PBXGroup;
+			children = (
+				58AFF7222C2DD5D200A98F84 /* KingfisherConfigurationManager.swift */,
+			);
+			path = KingfisherManager;
+			sourceTree = "<group>";
+		};
 		58CA52D62C108164002E7B15 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +152,13 @@
 		58CA52E12C108164002E7B15 /* TradeBro */ = {
 			isa = PBXGroup;
 			children = (
-				58CA52E22C108164002E7B15 /* TradeBroApp.swift */,
-				58CA52E42C108164002E7B15 /* ContentView.swift */,
-				58CA52E62C108165002E7B15 /* Assets.xcassets */,
+				58CA52F62C1081F7002E7B15 /* App */,
+				58CA52F52C1081F1002E7B15 /* Modules */,
+				58CA52F42C1081E9002E7B15 /* Features */,
+				58CA52F32C1081E0002E7B15 /* ReusableViews */,
+				58CA52F22C1081D7002E7B15 /* Models */,
+				58CA52F12C1081CF002E7B15 /* Resources */,
+				58CA52F02C1081C8002E7B15 /* Extensions */,
 				58CA52E82C108165002E7B15 /* Preview Content */,
 			);
 			path = TradeBro;
@@ -65,6 +170,138 @@
 				58CA52E92C108165002E7B15 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		58CA52F02C1081C8002E7B15 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				58CA530F2C17761E002E7B15 /* Font */,
+				58CA530C2C108FA9002E7B15 /* View+extension */,
+				58AFF70F2C2DBED300A98F84 /* GlobalFunctions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		58CA52F12C1081CF002E7B15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				58CA53142C177C5D002E7B15 /* Text */,
+				58CA52E62C108165002E7B15 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		58CA52F22C1081D7002E7B15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58AFF7182C2DC2B600A98F84 /* Network */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58CA52F32C1081E0002E7B15 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		58CA52F42C1081E9002E7B15 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				58CA53072C108CFF002E7B15 /* HomeView */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		58CA52F52C1081F1002E7B15 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				58CA52FD2C108479002E7B15 /* DependancyContainer */,
+				58CA53002C1089D7002E7B15 /* AppRouter */,
+				58AFF7032C2DBD4C00A98F84 /* Network */,
+				58AFF7212C2DD5C700A98F84 /* KingfisherManager */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		58CA52F62C1081F7002E7B15 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				58CA52E22C108164002E7B15 /* TradeBroApp.swift */,
+				58CA52F82C1083A1002E7B15 /* Views */,
+				58CA52F72C10839A002E7B15 /* ViewModels */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		58CA52F72C10839A002E7B15 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				58CA52FB2C1083F5002E7B15 /* RootViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		58CA52F82C1083A1002E7B15 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				58CA52F92C1083AA002E7B15 /* RootView.swift */,
+				58CA53032C108A12002E7B15 /* PreloaderView.swift */,
+				58CA53052C108CD6002E7B15 /* WelcomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		58CA52FD2C108479002E7B15 /* DependancyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				58CA52FE2C10847D002E7B15 /* DependancyContainer.swift */,
+			);
+			path = DependancyContainer;
+			sourceTree = "<group>";
+		};
+		58CA53002C1089D7002E7B15 /* AppRouter */ = {
+			isa = PBXGroup;
+			children = (
+				58CA53012C1089D9002E7B15 /* AppRouter.swift */,
+			);
+			path = AppRouter;
+			sourceTree = "<group>";
+		};
+		58CA53072C108CFF002E7B15 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				58AFF7142C2DC22A00A98F84 /* HomeView.swift */,
+				58CA530A2C108D1F002E7B15 /* HomeViewModel.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		58CA530C2C108FA9002E7B15 /* View+extension */ = {
+			isa = PBXGroup;
+			children = (
+				58CA530D2C108FB7002E7B15 /* View+Navigation.swift */,
+				58AFF71F2C2DD54600A98F84 /* View+Kingfisher.swift */,
+			);
+			path = "View+extension";
+			sourceTree = "<group>";
+		};
+		58CA530F2C17761E002E7B15 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				58CA53102C177719002E7B15 /* Font+SFPro.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		58CA53142C177C5D002E7B15 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				58CA53152C177C66002E7B15 /* AppTextMain.swift */,
+				58AFF70D2C2DBEA100A98F84 /* Errors.swift */,
+			);
+			path = Text;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +320,11 @@
 			dependencies = (
 			);
 			name = TradeBro;
+			packageProductDependencies = (
+				58CA531B2C1868F4002E7B15 /* SolanaSwift */,
+				58CA531E2C189DF7002E7B15 /* KeychainAccess */,
+				58AFF71D2C2DD49000A98F84 /* Kingfisher */,
+			);
 			productName = TradeBro;
 			productReference = 58CA52DF2C108164002E7B15 /* TradeBro.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +353,11 @@
 				Base,
 			);
 			mainGroup = 58CA52D62C108164002E7B15;
+			packageReferences = (
+				58CA531A2C1868F4002E7B15 /* XCRemoteSwiftPackageReference "solana-swift" */,
+				58CA531D2C189DF7002E7B15 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				58AFF71C2C2DD49000A98F84 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 58CA52E02C108164002E7B15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +384,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58CA52E52C108164002E7B15 /* ContentView.swift in Sources */,
+				58AFF7202C2DD54600A98F84 /* View+Kingfisher.swift in Sources */,
+				58AFF70C2C2DBE8100A98F84 /* NetworkError.swift in Sources */,
+				58CA52FF2C10847D002E7B15 /* DependancyContainer.swift in Sources */,
+				58CA530B2C108D1F002E7B15 /* HomeViewModel.swift in Sources */,
+				58CA53042C108A12002E7B15 /* PreloaderView.swift in Sources */,
+				58AFF70A2C2DBE6F00A98F84 /* Endpoint.swift in Sources */,
+				58AFF7172C2DC29400A98F84 /* TokenMetadata.swift in Sources */,
+				58CA53062C108CD6002E7B15 /* WelcomeView.swift in Sources */,
+				58CA53022C1089D9002E7B15 /* AppRouter.swift in Sources */,
+				58AFF71A2C2DC7D100A98F84 /* SolToken.swift in Sources */,
+				58AFF7102C2DBED300A98F84 /* GlobalFunctions.swift in Sources */,
+				58AFF7132C2DC16500A98F84 /* RadiumClientAPI.swift in Sources */,
+				58AFF7082C2DBE6600A98F84 /* Response.swift in Sources */,
+				58CA53112C177719002E7B15 /* Font+SFPro.swift in Sources */,
+				58CA53162C177C66002E7B15 /* AppTextMain.swift in Sources */,
+				58CA52FA2C1083AA002E7B15 /* RootView.swift in Sources */,
+				58AFF7052C2DBE2800A98F84 /* APIClient.swift in Sources */,
+				58AFF70E2C2DBEA100A98F84 /* Errors.swift in Sources */,
+				58CA52FC2C1083F5002E7B15 /* RootViewModel.swift in Sources */,
 				58CA52E32C108164002E7B15 /* TradeBroApp.swift in Sources */,
+				58CA530E2C108FB7002E7B15 /* View+Navigation.swift in Sources */,
+				58AFF7152C2DC22A00A98F84 /* HomeView.swift in Sources */,
+				58AFF7232C2DD5D200A98F84 /* KingfisherConfigurationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +522,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -272,13 +540,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TradeBro/Preview Content\"";
+				DEVELOPMENT_TEAM = 3N225TZ4SD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,13 +569,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TradeBro/Preview Content\"";
+				DEVELOPMENT_TEAM = 3N225TZ4SD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,6 +612,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58AFF71C2C2DD49000A98F84 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+		58CA531A2C1868F4002E7B15 /* XCRemoteSwiftPackageReference "solana-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/p2p-org/solana-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		58CA531D2C189DF7002E7B15 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58AFF71D2C2DD49000A98F84 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58AFF71C2C2DD49000A98F84 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		58CA531B2C1868F4002E7B15 /* SolanaSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58CA531A2C1868F4002E7B15 /* XCRemoteSwiftPackageReference "solana-swift" */;
+			productName = SolanaSwift;
+		};
+		58CA531E2C189DF7002E7B15 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58CA531D2C189DF7002E7B15 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58CA52D72C108164002E7B15 /* Project object */;
 }
