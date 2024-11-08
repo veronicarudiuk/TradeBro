@@ -3,14 +3,14 @@ import Foundation
 // MARK: - protocol API client
 protocol APIClient {
     var session: URLSession { get }
-    func execute<T: Decodable>(_ request: URLRequest, completion: @escaping (Result<Response<T>, Error>) -> Void)
+    func execute<T: Decodable>(_ request: URLRequest, completion: @escaping (Result<Response<T>, Error>) -> Void) -> URLSessionDataTask
 }
 
 extension APIClient {
     
-    func execute<T: Decodable>(_ request: URLRequest, completion: @escaping (Result<Response<T>, Error>) -> Void) {
+    func execute<T: Decodable>(_ request: URLRequest, completion: @escaping (Result<Response<T>, Error>) -> Void) -> URLSessionDataTask {
         
-        session.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             if let error = error {
                 debugOutput(error)
                 completion(.failure(NetworkError.transportError(error)))
@@ -37,7 +37,10 @@ extension APIClient {
             case .failure(let error):
                 completion(.failure(error))
             }
-        }.resume()
+        }
+        
+        task.resume()
+        return task
     }
 }
 
@@ -117,21 +120,18 @@ enum HTTPMethod: String {
 
 enum APIType {
     case raydium (endpoint: Endpoint)
-   
+    case raydiumV3 (endpoint: Endpoint)
+    
     var url : URL? {
         switch self {
         case .raydium(let endpoint):
-            let url = endpoint.urlRaydiumAPI
-            return url
+            return endpoint.urlRaydiumAPI
+        case .raydiumV3(let endpoint):
+            return endpoint.urlRaydiumV3API
         }
     }
     
     var httpHeader : [String : String]? {
-//        switch self {
-//        case .transfermarket:
-//            ["X-RapidAPI-Key": "0a4b43d9f6mshc9e9d6270843362p1bd519jsnd1c97f754415"]
-//        case .newsAPI:
-            nil
-//        }
+        nil
     }
 }

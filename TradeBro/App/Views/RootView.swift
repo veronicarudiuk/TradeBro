@@ -16,7 +16,6 @@ struct RootView: View {
             }
             
         }
-        .id(viewModel.refreshKey)
     }
 }
 
