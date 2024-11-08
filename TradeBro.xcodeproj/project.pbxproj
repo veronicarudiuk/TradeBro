@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		583747BF2C4A7BF5000A45BE /* RadiumAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583747BE2C4A7BF5000A45BE /* RadiumAPI.swift */; };
 		58AFF7052C2DBE2800A98F84 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF7042C2DBE2800A98F84 /* APIClient.swift */; };
 		58AFF7082C2DBE6600A98F84 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF7072C2DBE6600A98F84 /* Response.swift */; };
 		58AFF70A2C2DBE6F00A98F84 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFF7092C2DBE6F00A98F84 /* Endpoint.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		583747BE2C4A7BF5000A45BE /* RadiumAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiumAPI.swift; sourceTree = "<group>"; };
 		58AFF7042C2DBE2800A98F84 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		58AFF7072C2DBE6600A98F84 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		58AFF7092C2DBE6F00A98F84 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -80,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		583747BA2C496D6D000A45BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				58AFF7142C2DC22A00A98F84 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		583747BB2C496D7B000A45BE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				58CA530A2C108D1F002E7B15 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		58AFF7032C2DBD4C00A98F84 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				58AFF7122C2DC16500A98F84 /* RadiumClientAPI.swift */,
+				583747BE2C4A7BF5000A45BE /* RadiumAPI.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -272,8 +291,8 @@
 		58CA53072C108CFF002E7B15 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				58AFF7142C2DC22A00A98F84 /* HomeView.swift */,
-				58CA530A2C108D1F002E7B15 /* HomeViewModel.swift */,
+				583747BA2C496D6D000A45BE /* Views */,
+				583747BB2C496D7B000A45BE /* ViewModels */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -396,6 +415,7 @@
 				58AFF71A2C2DC7D100A98F84 /* SolToken.swift in Sources */,
 				58AFF7102C2DBED300A98F84 /* GlobalFunctions.swift in Sources */,
 				58AFF7132C2DC16500A98F84 /* RadiumClientAPI.swift in Sources */,
+				583747BF2C4A7BF5000A45BE /* RadiumAPI.swift in Sources */,
 				58AFF7082C2DBE6600A98F84 /* Response.swift in Sources */,
 				58CA53112C177719002E7B15 /* Font+SFPro.swift in Sources */,
 				58CA53162C177C66002E7B15 /* AppTextMain.swift in Sources */,

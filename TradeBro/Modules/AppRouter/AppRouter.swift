@@ -1,9 +1,8 @@
 import SwiftUI
-//import Combine
 
 enum AppRouter {
     case preloader
-    case welcome//(PassthroughSubject<Void, Never>)
+    case welcome
     case home
 
     

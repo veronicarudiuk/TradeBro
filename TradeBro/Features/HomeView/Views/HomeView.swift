@@ -55,6 +55,13 @@ struct HomeView: View {
                                     }
                                 }
                             }
+                            .background {
+                                viewModel.sentToken?.mint == token.mint ? Color.gray : Color.clear
+                            }
+                            .onTapGesture {
+                                viewModel.sentToken = token
+                            }
+                            
                         }
                         
                         Button("Отправить 0.0001 sol") {
@@ -66,10 +73,41 @@ struct HomeView: View {
                     }
                 }
             }
+            
+            if viewModel.sentToken != nil {
+                sentToken
+            }
         }
         .padding()
     }
 
+    private var sentToken: some View {
+            VStack {
+                TextField("Recipient Address", text: $viewModel.sentTokenToAddress)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+
+                TextField("Amount", text: $viewModel.sentTokenAmount)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                    .keyboardType(.numberPad)
+                
+                Button(action: {
+                    Task {
+                        await viewModel.sendSPLTokens()
+                    }
+                }) {
+                    Text("Send Tokens")
+                        .fontWeight(.bold)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+                .padding()
+            }
+            .padding()
+        }
 }
 
 
