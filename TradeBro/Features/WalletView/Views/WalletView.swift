@@ -8,7 +8,9 @@ struct WalletView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
+            
+            
             Text("Ваш адрес: \(viewModel.wallet.keyPair.publicKey)")
                 .padding()
             
@@ -24,6 +26,8 @@ struct WalletView: View {
                     }
                 }
             }
+            
+            Spacer()
         }
         
     }

@@ -40,7 +40,7 @@ extension WalletInfoManager: WalletInfoManagerProvider {
             let tokenAccounts = try await getTokenAccountsByOwner(for: publicKey)
             let metadataResponse = try await getTokenMetadata(tokenAccounts: tokenAccounts)
             let tokenPrices = try await getTokenPrices()
-            
+//            debugOutput(tokenPrices)
             for tokenAccount in tokenAccounts {
                 let token = try await getTokenInfo(
                     tokenAccount: tokenAccount,
@@ -49,6 +49,8 @@ extension WalletInfoManager: WalletInfoManagerProvider {
                 )
                 balances.append(token)
             }
+            
+//            debugOutput(balances)
             return balances.sorted(by: compareTokensByPrice)
         } catch {
             throw NSError(domain: "WalletInfoManager", code: -2, userInfo: [NSLocalizedDescriptionKey: "Ошибка при получении баланса токенов: \(error)"])

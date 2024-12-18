@@ -8,7 +8,7 @@ struct TokenMetadata: Decodable {
     let decimals: UInt8
     let tags: [String]
     let extensions: [String: String]
-    let price: Double?
+//    let price: Double?
 }
 
 extension TokenMetadata {

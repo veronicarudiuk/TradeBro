@@ -11,45 +11,63 @@ struct HomeView: View {
         VStack {
             top
             
-            if viewModel.isDropdownVisible {
-                dropdown
-            }
-            
-            if let activeWallet = viewModel.activeWallet {
-                WalletView(wallet: activeWallet)
-            }
-            
-            
-                addWallet
-            
+            wallet
         }
     }
-    
+}
+
+// MARK: - Top
+extension HomeView {
     private var top: some View {
-        HStack {
-            Text(viewModel.activeWallet?.displayName ?? "No Wallet")
-                .font(.title)
-                .bold()
+        HStack(spacing: 0) {
             Spacer()
-            Button(action: {
-                withAnimation {
-                    viewModel.isDropdownVisible.toggle()
-                }
-            }) {
-                Image(systemName: "chevron.down")
-                    .rotationEffect(.degrees(viewModel.isDropdownVisible ? 180 : 0))
-            }
+            topWalletName
+            Spacer()
         }
-        .padding()
+        .padding(.vertical, 14)
     }
     
-    private var dropdown: some View {
-        WalletDropdownView(wallets: viewModel.wallets, onSelect: { wallet in
-            viewModel.switchWallet(to: wallet)
-            withAnimation {
-                viewModel.isDropdownVisible = false
+    @ViewBuilder
+    private var topWalletName: some View {
+        if let activeWallet = viewModel.activeWallet {
+            HStack(spacing: 0) {
+                Text(activeWallet.displayName)
+                    .foregroundStyle(.textDark)
+                    .font(.body2Bold)
+                    .padding(.trailing, 8)
+                
+                Image(.arrowDown)
+                    .frame(width: 16, height: 16)
+                
             }
-        })
+            .onTapGesture {
+                withAnimation {
+                    viewModel.isWalletsSheetVisible.toggle()
+                }
+            }
+            .sheet(isPresented: $viewModel.isWalletsSheetVisible) {
+                WalletsSheetView(wallets: viewModel.wallets,
+                                 switchToWalletSubject: viewModel.switchToWalletSubject,
+                                 addedWalletSubject: viewModel.addedWalletSubject, 
+                                 isWalletsSheetVisible: $viewModel.isWalletsSheetVisible)
+            }
+        } else {
+            Spacer()
+        }
+    }
+}
+    
+
+// MARK: - Top
+extension HomeView {
+    @ViewBuilder
+    private var wallet: some View {
+        if let activeWallet = viewModel.activeWallet {
+            WalletView(wallet: activeWallet)
+                .id(viewModel.activeWallet?.displayName)
+        } else {
+            addWallet
+        }
     }
     
     private var addWallet: some View {
