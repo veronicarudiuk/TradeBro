@@ -15,7 +15,7 @@ extension View {
         self
             .hideNavigationBar()
             .ignoresSafeArea(.keyboard)
-            .ignoresSafeArea(.all)
+//            .ignoresSafeArea(.all)
     }
 }
 

@@ -36,84 +36,57 @@ extension RadiumClientAPI: RadiumClientAPIProvider {
     
     func getTokensMetadata(mintAddresses: [String],
                            completion: @escaping (Result<[TokenMetadata], Error>) -> Void) {
-        debugOutput("start \(#function) mintAddresses \(mintAddresses)")
-        cancelCurrentTask()
+        debugOutput()
         
         let mintAddressesString = mintAddresses.joined(separator: ",")
         
-        let endpoint = "https://api-v3.raydium.io/mint/ids?mints=\(mintAddressesString)"
+        let endpoint = makeEndPoint(with: .metadata, and: [.mints(mintAddressesString)])
         
-        guard let url = URL(string: endpoint) else {
-            completion(.failure(URLError(.badURL)))
+        guard let request = try? makeURLRequest(with: .raydiumV3(endpoint: endpoint), and: .GET) else {
+            DispatchQueue.main.async {
+                completion(.failure(NetworkError.requestFailed))
+            }
             return
         }
         
-        currentTask = session.dataTask(with: url) { data, response, error in
-            if let error = error {
-                DispatchQueue.main.async {
-                    completion(.failure(error))
-                }
-                return
-            }
-            
-            guard let data = data else {
-                DispatchQueue.main.async {
-                    completion(.failure(URLError(.badServerResponse)))
-                }
-                return
-            }
-            
-            do {
-                let responseModel = try JSONDecoder().decode(RaydiumResponse.self, from: data)
-                DispatchQueue.main.async {
-                    let tokenDatas = responseModel.data
-                    completion(.success(tokenDatas))
-                }
-            } catch {
-                DispatchQueue.main.async {
+        cancelCurrentTask()
+        
+        currentTask = execute(request) { (result: Result<Response<RaydiumResponse>, Error>) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let response):
+                    completion(.success(response.value.data))
+                case .failure(let error):
                     completion(.failure(error))
                 }
             }
         }
-        currentTask?.resume()
     }
     
     
     func getTokenPrices(completion: @escaping (Result<[String: Double], Error>) -> Void) {
-        debugOutput("start \(#function)")
-        cancelCurrentTask()
+        debugOutput()
         
         let endpoint = makeEndPoint(with: .price, and: [])
         
         guard let request = try? makeURLRequest(with: .raydium(endpoint: endpoint), and: .GET) else {
-            completion(.failure(NetworkError.requestFailed))
+            DispatchQueue.main.async {
+                completion(.failure(NetworkError.requestFailed))
+            }
             return
         }
         
-        currentTask = session.dataTask(with: request) { data, response, error in
-            
-            if let error = error {
-                debugOutput("\(#function) error \(error)")
-                DispatchQueue.main.async {
+        cancelCurrentTask()
+        
+        currentTask = execute(request) { (result: Result<Response<[String: Double]>, Error>) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let response):
+                    completion(.success(response.value))
+                case .failure(let error):
                     completion(.failure(error))
                 }
-                return
-            }
-            
-            guard let data = data else {
-                DispatchQueue.main.async {
-                    completion(.failure(NetworkError.noData))
-                }
-                return
-            }
-            
-            do {
-                let responseModel = try JSONDecoder().decode([String: Double].self, from: data)
-                completion(.success(responseModel))
-            } catch {
-                completion(.failure(error))
             }
         }
-        currentTask?.resume()
     }
 }

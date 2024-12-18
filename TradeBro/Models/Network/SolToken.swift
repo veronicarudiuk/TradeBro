@@ -22,7 +22,7 @@ extension SolToken {
     }
     
     var priceString: String {
-        guard let price = tokenMetadata?.price else { return "-" }
+        guard let price = price else { return "-" }
         return "\(price)"
     }
 }
